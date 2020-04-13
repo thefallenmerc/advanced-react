@@ -8,13 +8,12 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "transpile": "babel ./server --out-dir dist",
     "dev": "nodemon --exec babel-node ./lib/server.js"
   },
   "babel": {
     "presets": [
-      "react",
-      "env",
-      "stage-2"
+      "@babel/preset-env"
     ]
   },
   "author": "Shubham Singh Chahar",
@@ -25,11 +24,12 @@
     "eslint-plugin-react": "^7.19.0"
   },
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.5",
     "ejs": "^3.0.2",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "rimraf": "^3.0.2"
   }
 }
