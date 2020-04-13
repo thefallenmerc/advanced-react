@@ -8,11 +8,13 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "transpile": "babel ./server --out-dir dist",
-    "dev": "nodemon --exec babel-node ./lib/server.js"
+    "dev": "nodemon --exec babel-node ./lib/server.js",
+    "start": "webpack --mode development",
+    "build": "webpack --mode production"
   },
   "babel": {
     "presets": [
+      "@babel/preset-react",
       "@babel/preset-env"
     ]
   },
@@ -21,15 +23,21 @@
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
-    "eslint-plugin-react": "^7.19.0"
+    "eslint-plugin-react": "^7.19.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
   },
   "dependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
     "@babel/node": "^7.8.7",
     "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
     "ejs": "^3.0.2",
     "express": "^4.17.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "rimraf": "^3.0.2"
   }
 }
