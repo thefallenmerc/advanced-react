@@ -2,25 +2,35 @@ import ReactDOM from 'react-dom';
 
 import React, { Component } from 'react';
 
-export default class App extends Component {
-    state = {
-        red: 'green'
-    };
+type P = {};
+
+type S = {
+    message: string
+};
+
+export default class App extends Component<P, S> {
+
+    constructor(p: P) {
+        super(p);
+        this.state = {
+            message: ''
+        };
+    }
 
     asyncFunction() {
-        return Promise.resolve('yellow');
+        return Promise.resolve('Red');
     }
 
     async componentDidMount() {
         this.setState({
-            red: await this.asyncFunction()
+            message: await this.asyncFunction()
         });
     }
 
     render() {
         return (
             <div>
-                In Class {this.state.red}
+                In Class {this.state.message}
             </div>
         );
     }

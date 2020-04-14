@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
     entry: [
         './node_modules/regenerator-runtime/runtime.js',
-        './lib/__components/index.js'
+        './lib/__components/index.tsx'
     ],
     output: {
         path: path.resolve(__dirname, 'public'),
@@ -11,7 +11,7 @@ module.exports = {
     },
     module: {
         rules: [
-            { test: /\.(js|jsx)$/, exclude: /node_modules/, use: 'babel-loader' }
+            { test: /\.(ts|tsx)$/, exclude: /node_modules/, use: 'babel-loader' }
         ]
     }
 };

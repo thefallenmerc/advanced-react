@@ -15,6 +15,7 @@
   "babel": {
     "presets": [
       "@babel/preset-react",
+      "@babel/preset-typescript",
       "@babel/preset-env"
     ],
     "plugins": [
@@ -24,6 +25,8 @@
   "author": "Shubham Singh Chahar",
   "license": "ISC",
   "devDependencies": {
+    "@babel/preset-typescript": "^7.9.0",
+    "@types/react": "^16.9.34",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.19.0",
